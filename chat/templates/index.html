@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disponnect</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #chat-box { max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        .message { margin-bottom: 15px; }
+        .timestamp { font-size: 0.9em; color: #888; }
+        .username { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>FastAPI & HTMX Chat</h2>
+
+    <!-- Chat Messages Container -->
+    <div id="chat-box" hx-get="/messages" hx-trigger="load" hx-swap="innerHTML">
+        <!-- Messages will be dynamically loaded here -->
+    </div>
+
+    <!-- Chat Form -->
+    <form id="chat-form" hx-post="/send" hx-swap="none" onsubmit="return false;">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="text" id="text" name="text" placeholder="Enter your message" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        // Auto-scroll chat box to the latest message
+        htmx.on('htmx:afterRequest', function(evt) {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+    </script>
+</body>
+</html>

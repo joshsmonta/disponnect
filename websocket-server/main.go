@@ -81,8 +81,8 @@ func main() {
 	server := NewServer()
 	http.Handle("/ws", websocket.Handler(server.handleWS))
 	http.Handle("/subscription", websocket.Handler(server.handleSubscription))
-	fmt.Println("WebSocket server is running on :8000...")
-	if err := http.ListenAndServe(":8000", nil); err != nil {
+	fmt.Println("WebSocket server is running on :8001...")
+	if err := http.ListenAndServe(":8001", nil); err != nil {
 		fmt.Println("Server error:", err)
 	}
 }

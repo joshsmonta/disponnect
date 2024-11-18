@@ -1,0 +1,101 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.swn
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyz.pyc
+*.env
+.venv/
+env/
+venv/
+pip-log.txt
+pip-wheel-metadata/
+*.pytest_cache/
+.tox/
+.mypy_cache/
+.coverage
+htmlcov/
+.cache/
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+.wheels/
+.coverage.*
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# VSCode and PyCharm
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.a
+*.o
+*.cgo/
+*.cgo2/
+_testmain.go
+_test.go
+go.sum
+vendor/
+.golangci.yml
+*.prof
+*.coverprofile
+*.coverage
+*.cov
+*.lcov
+*.test.json
+*.test.yaml
+
+# Go mod and cache
+/go.*
+/*.mod
+/.cache/
+.gopath/
+bin/
+cmd/
+
+# Git hooks
+.hooks/
+
+# Logs and debugging
+logs/
+*.log
+debug/
+trace/
+*.trace
+
+# Temporary files
+*.temp
+*.tmp
+*.bak
+*.swp
+*.swo
+*.swn
